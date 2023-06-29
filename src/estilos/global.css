@@ -25,7 +25,7 @@
     --ff-boxing: 'fighter';
     --ff-boxing: 'Boxing';
 
-    --text: #ffffff;
+    --text: hsl(0, 0%, 100%);
     --text-2: hsl(0, 0%, 10%);
     --background: #080707;
     --background-2: #cfc8c8;
@@ -36,11 +36,13 @@
 
 @media(prefers-color-scheme: light){
     :root{
-        --text: #ffffff;
-        --background: #080707;
-        --primary-button: #858893;
-        --secondary-button: #000000;
-        --accent: #ee2f16;
+        --text: hsl(0, 0%, 95%);
+        --text-2: hsl(0, 0%, 90%);
+        --background: hsl(0, 7%, 93%);
+        --background-2: hsl(0, 0%, 5%);
+        --primary-button: hsl(227, 6%, 55%);
+        --secondary-button: hsl(0, 0%, 0%);
+        --accent: hsl(7, 70%, 49%);
     }
 }
 
@@ -92,6 +94,11 @@ h2{
 
 p{
     font-size: var(--fs-2);
+    /* color: var(--text); */
+}
+
+.section {
+    margin: 5vh 0;
 }
 
 .btn{
@@ -138,8 +145,20 @@ p{
 
 .header__nav{
     padding-block: 1rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     border-bottom: 3px solid var(--background);
+    align-items: center;
+}
+
+@media (width < 40em){
+    .header__nav{
+        display: none;
+    }
+}
+
+.header__nav img{
+    width: 6rem;
 }
 
 .nav__link {
@@ -147,6 +166,15 @@ p{
     color: var(--text-2);
     font-weight: 700;
     font-size: var(--fs-0);
+    transition: all .17s linear;
+}
+
+.nav__link:hover{
+    color: var(--accent);
+    transform: scale(1.1, 1.1);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 4px;
 }
 .header__sponsor{
     flex-wrap: wrap;
@@ -163,6 +191,7 @@ p{
     padding: 2rem;
     flex: 1;
     text-align: center;
+    color: var(--text-2);
 }
 .header__ads:nth-child(2){
     border-inline: 3px solid var(--background);
@@ -200,7 +229,7 @@ p{
     inset: 0;
     z-index: -1;
     background-color: var(--background);
-    background-image: url(../../public/images/hero-img.jpg);
+    background-image: url(../../public/images/hero-img.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -209,6 +238,7 @@ p{
 .main__text{
     align-items: center;
     gap: 1rem;
+    color: var(--text);
 }
 
 .main__text h2{
