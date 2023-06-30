@@ -17,17 +17,17 @@
     />
     <link rel="stylesheet" href="estilos/global.css" />
     <script src="javascript/script.js" defer></script>
-    <title>BOXING MATCH | HOME</title>
-  </head>
+    <title>BOXING MATCH | HOME</title></head
+  >s
   <body>
     <header class="header">
       <nav class="header__nav nav">
         <img src="../public/icons/rating.avif" alt="Iconos de estrellas" />
-        <a href="/" class="nav__link">Inicio</a>
-        <a href="/" class="nav__link">peleas</a>
-        <a href="/" class="nav__link">boxeadores</a>
-        <a href="/" class="nav__link">ranking</a>
-        <a href="/" class="nav__link">sobre nosotros</a>
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="#fights-container" class="nav__link">peleas</a>
+        <a href="#fighters-container" class="nav__link">boxeadores</a>
+        <a href="#ranking-container" class="nav__link">ranking</a>
+        <a href="index.html" class="nav__link">sobre nosotros</a>
         <img src="../public/icons/rating.avif" alt="Iconos de estrellas" />
       </nav>
       <div class="header__sponsor">
@@ -36,7 +36,7 @@
           <p>C/roma, 27. Italia</p>
         </div>
         <div class="header__ads">
-          <h2>el mejor</h2>
+          <h2>TITULO W3C COMPLETO</h2>
           <p>pesos pesados</p>
         </div>
         <div class="header__ads">
@@ -77,70 +77,83 @@
           aliquam repudiandae consectetur temporibus dicta tenetur eius
           aspernatur.
         </p>
-        <div class="peleas__container">
-          <article class="peleas__article">
-            <img
-              src="../public/images/article-images/article-fight-img.jpeg"
-              alt=""
-            />
-            <h3>
-              <span class="highlight">Andre Ward Vs Alex Tyson</span> <br />
-              Pelea de pesos pesados.
-            </h3>
-            <span class="aricle__date">Jul 24, 2023</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              maxime similique exercitationem asperiores!
-            </p>
-          </article>
-          <article class="peleas__article">
-            <img
-              src="../public/images/article-images/article-fight-img.jpeg"
-              alt=""
-            />
-            <h3>
-              <span class="highlight">Andre Ward Vs Alex Tyson</span> <br />
-              Pelea de pesos pesados.
-            </h3>
-            <span class="aricle__date">Jul 24, 2023</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              maxime similique exercitationem asperiores!
-            </p>
-          </article>
-          <article class="peleas__article">
-            <img
-              src="../public/images/article-images/article-fight-img.jpeg"
-              alt=""
-            />
-            <h3>
-              <span class="highlight">Andre Ward Vs Alex Tyson</span> <br />
-              Pelea de pesos pesados.
-            </h3>
-            <span class="aricle__date">Jul 24, 2023</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              maxime similique exercitationem asperiores!
-            </p>
-          </article>
-          <!-- <article></article>
-          <article></article>
-          <article></article>
-          <article></article> -->
+        <div id="fights-container" class="peleas__container">
+          <!-- Peleas -->
         </div>
       </section>
-      <section class="section">
-        <h2>Otras peleas de interés.</h2>
+      <section id="fighters-container" class="section">
+        <h2>BOXEADORES DESTACADOS</h2>
       </section>
-      <section class="section">
+      <section id="ranking-container" class="section">
         <h2>Ranking P4P.</h2>
       </section>
-      <section class="section">
+      <!-- <section id="fighters-container" class="section">
         <h2>Campeones.</h2>
-      </section>
+      </section> -->
     </main>
-    <footer>
-      <h2>Este es el footer</h2>
+    <footer class="footer">
+      <header class="footer__top">
+        <div class="footer__info">
+          <div class="footer__logo">LOGO BOXINGMATCH</div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita,
+            quos? Ex quidem iusto veniam quasi reiciendis deserunt architecto.
+          </p>
+          <div class="footer__socials">
+            <a href="index.html" class="footer__socials--link">
+              <img
+                src="../public/icons/signo-de-twitter.png"
+                alt="Social media icon"
+                class="footer__icons"
+              />
+            </a>
+            <a href="index.html" class="footer__socials--link">
+              <img
+                src="../public/icons/instagram.png"
+                alt="Social media icon"
+                class="footer__icons"
+              />
+            </a>
+            <a href="index.html" class="footer__socials--link">
+              <img
+                src="../public/icons/facebook.png"
+                alt="Social media icon"
+                class="footer__icons"
+              />
+            </a>
+            <a href="index.html" class="footer__socials--link">
+              <img
+                src="../public/icons/guante-de-boxeo.png"
+                alt="Social media icon"
+                class="footer__icons"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="footer__action">
+          <ul class="footer__ul">
+            <li><h3>titulo</h3></li>
+            <li><a href="index.html">link</a></li>
+            <li><a href="index.html">link</a></li>
+            <li><a href="index.html">link</a></li>
+          </ul>
+          <ul class="footer__ul">
+            <li><h3>titulo</h3></li>
+            <li><a href="index.html">link</a></li>
+            <li><a href="index.html">link</a></li>
+            <li><a href="index.html">link</a></li>
+          </ul>
+          <ul class="footer__ul">
+            <li><h3>titulo</h3></li>
+            <li><a href="index.html">link</a></li>
+            <li><a href="index.html">link</a></li>
+            <li><a href="index.html">link</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="copyright">
+        &copy; 2023 Boxing Match. Todos los derechos reservados.
+      </div>
     </footer>
   </body>
 </html>
