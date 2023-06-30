@@ -186,6 +186,14 @@ p {
   align-items: center;
 }
 
+.fixed-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: fit-content;
+  background-color: var(--background-2);
+  z-index: 999;
+}
+
 @media (width < 40em) {
   .header__nav {
     display: none;
