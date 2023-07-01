@@ -263,6 +263,7 @@ p {
   isolation: isolate;
   align-items: center;
   height: 50em;
+  width: 100%;
   aspect-ratio: 16/9;
 }
 
