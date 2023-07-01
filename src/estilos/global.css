@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Boxing';
   font-weight: bold;
-  src: url('../public/fonts/boxing-striped.woff2') format('woff2'),
-    url('../public/fonts/boxing-striped\(1\).woff2') format('woff2'),
-    url('../public/fonts/boxing.woff2') format('woff2');
+  src: url('../../public/fonts/boxing-striped.woff2') format('woff2'),
+    url('../../public/fonts/boxing-striped\(1\).woff2') format('woff2'),
+    url('../../public/fonts/boxing.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'fighter';
   font-weight: 400;
-  src: url(././public/fonts/brackley-demo.regular.ttf);
+  src: url(../../public/fonts/brackley-demo.regular.ttf);
 }
 
 :root {
@@ -273,7 +273,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../public/images/article-images/article-fight-img.webp');
+  background-image: url(../../public/images/article-images/article-fight-img.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
