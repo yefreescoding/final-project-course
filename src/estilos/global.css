@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Boxing";
+  font-family: 'Boxing';
   font-weight: bold;
-  src: url("../../public/fonts/boxing-striped.woff2") format("woff2"),
-    url("../../public/fonts/boxing-striped\(1\).woff2") format("woff2"),
-    url("../../public/fonts/boxing.woff2") format("woff2");
+  src: url('../../public/fonts/boxing-striped.woff2') format('woff2'),
+    url('../../public/fonts/boxing-striped\(1\).woff2') format('woff2'),
+    url('../../public/fonts/boxing.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: "fighter";
+  font-family: 'fighter';
   font-weight: 400;
   src: url(../../public/fonts/brackley-demo.regular.ttf);
 }
@@ -21,8 +21,8 @@
   --fs-3: clamp(2rem, calc(1rem + 1.7vw), 4rem);
   --fs-4: clamp(2.33rem, calc(1rem + 2vw), 4.05rem);
   --fs-5: clamp(2rem, calc(1rem + 15vw), 18rem);
-  --ff-boxing: "fighter";
-  --ff-boxing: "Boxing";
+  --ff-boxing: 'fighter';
+  --ff-boxing: 'Boxing';
 
   --text: hsl(0, 0%, 100%);
   --text-2: hsl(0, 0%, 10%);
@@ -35,8 +35,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --text: hsl(0, 0%, 95%);
-    --text-2: hsl(0, 0%, 9%);
+    --text: hsl(0, 0%, 5%);
+    --text-2: hsl(0, 0%, 99%);
     --background: hsl(0, 7%, 93%);
     --background-2: hsl(0, 0%, 5%);
     --primary-button: hsl(227, 6%, 55%);
@@ -64,7 +64,7 @@ html {
 
 body {
   background-color: var(--background);
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 img,
@@ -91,7 +91,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-wrap: balance;
 }
@@ -267,7 +267,7 @@ p {
 }
 
 .main__cover::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -284,11 +284,11 @@ p {
   position: relative;
   align-items: center;
   gap: 1rem;
-  color: var(--text);
+  color: hsl(0, 0%, 100%);
 }
 
 .main__text h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
 }
 
@@ -318,8 +318,8 @@ p {
 }
 
 .peleas__article {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--background-2);
+  color: var(--text-2);
   border: 3px solid var(--accent);
   gap: 1rem;
   padding: 0.5rem;
