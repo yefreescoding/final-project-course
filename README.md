@@ -16,3 +16,5 @@ Sitio web creado para los amantes del boxeo.Toda la información que te interesa
 - MySQL
 
 ## Retos del proyecto:
+
+- Hacer que sea responsive
