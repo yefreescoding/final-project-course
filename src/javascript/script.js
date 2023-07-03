@@ -54,3 +54,17 @@ window.addEventListener("scroll", function () {
 });
 
 // console.log(navHeight);
+const icons = document.querySelectorAll(".icons");
+
+const darkModeQuery = window.matchMedia("(prefers-color-scheme: light)");
+
+function toggleDarkMode(event) {
+  if (event.matches) {
+    icons.forEach((icon) => icon.classList.add("icons-light"));
+  } else {
+    icons.forEach((icon) => icon.classList.remove("icons-light"));
+  }
+}
+
+darkModeQuery.addEventListener("change", toggleDarkMode);
+toggleDarkMode(darkModeQuery);

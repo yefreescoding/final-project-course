@@ -144,6 +144,10 @@ p {
   color: var(--accent);
 }
 
+.icons.icons-light {
+  filter: brightness(0) invert(1);
+}
+
 .header,
 .header__nav,
 .header__sponsor,
