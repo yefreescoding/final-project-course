@@ -5,7 +5,7 @@ const peleas = [
     description: "Pelea de pesoligreo",
     date: "Martes 24 Jul, 2023.",
     place: "Osaka, Japon.",
-    image: "public/images/article-images/poster-hero.avif",
+    image: "public/images/article-images/poster-hero.webp",
   },
   {
     boxer1: "Andre Ward",

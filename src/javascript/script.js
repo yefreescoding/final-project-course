@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
               <span class="highlight">${pelea.boxer1} Vs ${pelea.boxer2}</span> <br />
               ${pelea.description}
             </h3>
-            <span class="aricle__date">${pelea.date}</span>
+            <span class="article__date">${pelea.date}</span>
             <p>
                 ${pelea.place}
             </p>
