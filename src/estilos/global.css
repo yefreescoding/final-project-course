@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Boxing';
+  font-family: "Boxing";
   font-weight: bold;
-  src: url('../../public/fonts/boxing-striped.woff2') format('woff2'),
-    url('../../public/fonts/boxing-striped\(1\).woff2') format('woff2'),
-    url('../../public/fonts/boxing.woff2') format('woff2');
+  src: url("../../public/fonts/boxing-striped.woff2") format("woff2"),
+    url("../../public/fonts/boxing-striped\(1\).woff2") format("woff2"),
+    url("../../public/fonts/boxing.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'fighter';
+  font-family: "fighter";
   font-weight: 400;
   src: url(../../public/fonts/brackley-demo.regular.ttf);
 }
@@ -21,8 +21,8 @@
   --fs-3: clamp(2rem, calc(1rem + 1.7vw), 4rem);
   --fs-4: clamp(2.33rem, calc(1rem + 2vw), 4.05rem);
   --fs-5: clamp(2rem, calc(1rem + 15vw), 18rem);
-  --ff-boxing: 'fighter';
-  --ff-boxing: 'Boxing';
+  --ff-boxing: "fighter";
+  --ff-boxing: "Boxing";
 
   --text: hsl(0, 0%, 100%);
   --text-2: hsl(0, 0%, 10%);
@@ -64,7 +64,7 @@ html {
 
 body {
   background-color: var(--background);
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 img,
@@ -91,7 +91,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-wrap: balance;
 }
@@ -116,7 +116,9 @@ p {
 
 .section {
   margin: 5vh 0;
+  padding: 0.5vh 0.5vw;
   text-align: center;
+  gap: 3rem;
 }
 
 .btn {
@@ -268,7 +270,7 @@ p {
 }
 
 .main__cover::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -289,7 +291,7 @@ p {
 }
 
 .main__text h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
 }
 
@@ -314,13 +316,13 @@ p {
 }
 .peleas__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(18em, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
   gap: 2rem;
 }
 
 .peleas__article {
-  background-color: var(--background-2);
-  color: var(--text-2);
+  background-color: var(--background-1);
+  color: var(--text);
   border: 3px solid var(--accent);
   gap: 1rem;
   padding: 0.5rem;
@@ -328,9 +330,66 @@ p {
 }
 
 .peleas__article img {
-  /* width: 25em; */
   aspect-ratio: 4/3;
   object-fit: cover;
+}
+
+.card {
+  --trans-time: 1s;
+  position: relative;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 3px solid var(--accent);
+}
+
+.card img {
+  aspect-ratio: 4/4;
+  object-fit: cover;
+  transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: var(--background);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 1rem hsla(0, 0%, 80%, 0.5);
+}
+
+.card__content {
+  position: absolute;
+  inset: 0;
+  padding: 1.1rem;
+  color: var(--text-2);
+  background-color: var(--background-2);
+  text-align: left;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  font-size: var(--fs-2);
+  color: var(--text-2);
+  font-weight: 700;
+}
+
+.card:hover img {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: var(--fs-0);
+  color: var(--text-2);
+  line-height: 1.4;
 }
 
 .footer {
