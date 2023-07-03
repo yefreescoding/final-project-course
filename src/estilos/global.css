@@ -301,13 +301,17 @@ p {
 
 .carousel {
   gap: 1.5rem;
-  background-color: var(--accent);
-  justify-content: space-around;
+  padding: 1rem;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  background-color: var(--accent);
   box-shadow: hsla(0, 0%, 0%, 0.45) 0px 25px 20px -20px;
 }
 .carousel__span {
-  font-size: 5rem;
+  font-size: clamp(4rem, calc(1.5rem + 3vw), 5rem);
+  line-height: 1;
   font-weight: 700;
   color: white;
   text-shadow: 0 1px 0px var(--background), 1px 0 0px var(--background),
@@ -345,7 +349,7 @@ p {
 }
 
 .card {
-  --trans-time: 1s;
+  --trans-time: 0.5s;
   position: relative;
   background-color: #f2f2f2;
   display: flex;
