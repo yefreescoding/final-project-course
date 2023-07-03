@@ -244,6 +244,13 @@ p {
 .header__ads:nth-child(2) {
   border-inline: 3px solid var(--background);
 }
+
+@media (width < 40em) {
+  .header__ads:nth-child(2) {
+    border: none;
+    border-right: 3px solid var(--background);
+  }
+}
 .header__logo {
   background-color: var(--background);
 }
@@ -368,11 +375,6 @@ p {
   background-color: var(--background);
 }
 
-.card:hover {
-  /* transform: scale(1.05); */
-  box-shadow: 0 8px 1rem hsla(0, 0%, 80%, 0.5);
-}
-
 .card__content {
   position: absolute;
   inset: 0;
@@ -409,9 +411,6 @@ p {
 .footer {
   background-color: var(--background-2);
   color: var(--accent);
-  /* align-items: center; */
-  /* padding: 1rem; */
-  /* height: 50vh; */
 }
 
 .footer__top {
