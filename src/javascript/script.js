@@ -1,10 +1,19 @@
+// import data from "../data/boxers.json";
+
 // Test de informacion de peleadores
-const peleasContenedor = document.querySelector("#fights-container");
-const boxeadoresContenedor = document.querySelector("#fighters-container");
+const peleasCont = document.querySelector("#fights-container");
+const boxeadoresCont = document.querySelector("#fighters-container");
+const rankingCont = document.querySelector("#ranking-container");
 
 window.addEventListener("DOMContentLoaded", function () {
-  let mostrarPeleas = peleas.map((pelea) => {
-    return ` <article class="peleas__article">
+  fetch("src/javascript/Data/fights.json")
+    .then((response) => response.json())
+    .then((fights) => {
+      const firstThreeElements = fights.slice(0, 3);
+      peleasCont.innerHTML = firstThreeElements
+        .map(
+          (pelea) =>
+            ` <article class="peleas__article">
             <img
               src=${pelea.image}
               alt=""
@@ -17,13 +26,19 @@ window.addEventListener("DOMContentLoaded", function () {
             <p>
                 ${pelea.place}
             </p>
-          </article>`;
-  });
-  mostrarPeleas = mostrarPeleas.join("");
-  peleasContenedor.innerHTML = mostrarPeleas;
+          </article>`
+        )
+        .join("");
+    });
 
-  let mostrarBoxeadores = boxers.map((boxer) => {
-    return `<article class="card">
+  fetch("src/javascript/Data/boxers.json")
+    .then((response) => response.json())
+    .then((boxers) => {
+      const firstThreeBoxers = boxers.slice(0, 4);
+      boxeadoresCont.innerHTML = firstThreeBoxers
+        .map(
+          (boxer) =>
+            `<article class="card">
             <img
               src=${boxer.image}
               alt=""
@@ -35,10 +50,27 @@ window.addEventListener("DOMContentLoaded", function () {
                 ${boxer.bio}
               </p>
             </div>
-          </article>`;
-  });
-  mostrarBoxeadores = mostrarBoxeadores.join("");
-  boxeadoresContenedor.innerHTML = mostrarBoxeadores;
+          </article>`
+        )
+        .join("");
+    });
+
+  fetch("src/javascript/Data/boxers.json")
+    .then((response) => response.json())
+    .then((boxers) => {
+      const ranked = boxers.sort((a, b) => a.ranking - b.ranking);
+      rankingCont.innerHTML = ranked
+        .map(
+          (boxer) =>
+            `<tr>
+              <td data-cell="rank">${boxer.ranking}</td>
+              <td data-cell="name">${boxer.name}</td>
+              <td data-cell="country">${boxer.country}</td>
+              <td data-cell="record">${boxer.record}</td>
+            </tr>`
+        )
+        .join("");
+    });
 });
 
 const nav = document.querySelector(".nav");

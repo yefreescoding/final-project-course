@@ -413,9 +413,69 @@ p {
   line-height: 1.4;
 }
 
+/* ============================ */
+/* ============================ */
+
+.table {
+  text-align: left;
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 77%);
+}
+
+.table {
+  border-collapse: collapse;
+  border: 2px solid var(--accent);
+}
+
+.table th,
+.table td,
+.table caption {
+  padding: 1rem;
+}
+
+.table th {
+  background-color: hsl(0 0% 100% / 0.9);
+  color: hsl(0, 0%, 10%);
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: var(--fs-2);
+}
+
+.table tr:nth-child(2n) {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.table caption {
+  background-color: var(--background);
+  color: var(--text);
+  font-size: var(--fs-1);
+  text-transform: capitalize;
+}
+
+@media (width < 40em) {
+  .table th {
+    display: none;
+  }
+  .table td {
+    display: block;
+    font-size: 1.9rem;
+  }
+
+  .table td::before {
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+}
+
+/* ============================ */
+/* ============================ */
+
 .footer {
   background-color: var(--background-2);
-  color: var(--accent);
+  color: var(--text-2);
 }
 
 .footer__top {

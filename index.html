@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="src/estilos/global.css" />
     <!-- Link script -->
     <script src="src/javascript/script.js" defer></script>
-    <script src="src/javascript/Data/fights.js" defer></script>
-    <script src="src/javascript/Data/boxers.js" defer></script>
     <title>BOXING MATCH | HOME</title>
   </head>
   <body>
@@ -117,22 +115,20 @@
         aria-label="Ranking de los mejore boxeadores"
       >
         <h2>Ranking P4P.</h2>
-        <table class="table">
+        <table id="ranking-p4p" class="table">
+          <caption>
+            La lista de los 20 mejores peleadores libra por libra
+          </caption>
           <thead>
             <tr>
               <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
+              <th>Nombre</th>
+              <th>Pais</th>
               <th>Record</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>OLEKSANDR</td>
-              <td>USYK</td>
-              <td>20-0-0</td>
-            </tr>
+          <tbody id="ranking-container">
+            <!-- ranking displayed js -->
           </tbody>
         </table>
       </section>
