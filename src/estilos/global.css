@@ -265,7 +265,7 @@ p {
 
 .main {
   /* align-items: center; */
-  width: min(100% - 1rem, 101.875em);
+  width: min(100%, 105em);
   margin: 0 auto;
 }
 .main__cover {
@@ -420,11 +420,11 @@ p {
   text-align: left;
   background-color: hsl(0, 0%, 10%);
   color: hsl(0, 0%, 77%);
-}
-
-.table {
   border-collapse: collapse;
   border: 2px solid var(--accent);
+  font-size: var(--fs-2);
+  width: min(100%, 40em);
+  margin-inline: auto;
 }
 
 .table th,
