@@ -114,7 +114,7 @@ p {
 }
 
 .section {
-  margin: 5vh 0;
+  margin: 10vh 0;
   padding: 0.5vh 0.5vw;
   text-align: center;
   gap: 3rem;
@@ -127,6 +127,7 @@ p {
   margin-inline: 1rem;
   width: fit-content;
   text-transform: capitalize;
+  transition: all 0.2s linear;
 }
 
 .principal {
@@ -134,9 +135,17 @@ p {
   color: var(--text);
 }
 
+.principal:hover {
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
 .secondary {
   background-color: var(--background-2);
   color: var(--text-2);
+}
+.secondary:hover {
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .highlight {
@@ -178,17 +187,17 @@ p {
 }
 
 .header {
+  justify-content: start;
   background-color: var(--background-2);
-  /* margin: 1rem; */
   border-bottom: 3px solid var(--background-2);
 }
 
 .header__nav {
   padding-block: 1rem;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   border-bottom: 3px solid var(--background);
-  align-items: center;
 }
 
 .fixed-nav {
@@ -206,7 +215,9 @@ p {
 }
 
 .header__nav img {
-  width: 6rem;
+  width: 5rem;
+  object-fit: cover;
+  aspect-ratio: 16/8;
 }
 
 .nav__link {
@@ -290,7 +301,7 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: grayscale(100%) brightness(20%);
+  filter: grayscale(100%) brightness(10%);
 }
 
 .main__text {
@@ -306,6 +317,13 @@ p {
   font-size: var(--fs-4);
 }
 
+.main__text p {
+  font-size: var(--fs-2);
+  color: hsl(0, 0%, 70%);
+  width: min(100%, 35em);
+  margin-inline: auto;
+}
+
 .carousel {
   gap: 1.5rem;
   padding: 1rem;
@@ -317,7 +335,7 @@ p {
   box-shadow: hsla(0, 0%, 0%, 0.45) 0px 25px 20px -20px;
 }
 .carousel__span {
-  font-size: clamp(4rem, calc(1.5rem + 3vw), 5rem);
+  font-size: clamp(3rem, calc(1.5rem + 3vw), 5rem);
   line-height: 1;
   font-weight: 700;
   color: white;
@@ -327,7 +345,6 @@ p {
 }
 
 .peleas {
-  gap: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
