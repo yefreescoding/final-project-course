@@ -55,22 +55,22 @@ window.addEventListener("DOMContentLoaded", function () {
         .join("");
     });
 
-  fetch("src/javascript/Data/boxers.json")
-    .then((response) => response.json())
-    .then((boxers) => {
-      const ranked = boxers.sort((a, b) => a.ranking - b.ranking);
-      rankingCont.innerHTML = ranked
-        .map(
-          (boxer) =>
-            `<tr>
-              <td data-cell="rank">${boxer.ranking}</td>
-              <td data-cell="name">${boxer.name}</td>
-              <td data-cell="country">${boxer.country}</td>
-              <td data-cell="record">${boxer.record}</td>
-            </tr>`
-        )
-        .join("");
-    });
+  // fetch("src/javascript/Data/boxers.json")
+  //   .then((response) => response.json())
+  //   .then((boxers) => {
+  //     const ranked = boxers.sort((a, b) => a.ranking - b.ranking);
+  //     rankingCont.innerHTML = ranked
+  //       .map(
+  //         (boxer) =>
+  //           `<tr>
+  //             <td data-cell="rank">${boxer.ranking}</td>
+  //             <td data-cell="name">${boxer.name}</td>
+  //             <td data-cell="country">${boxer.country}</td>
+  //             <td data-cell="record">${boxer.record}</td>
+  //           </tr>`
+  //       )
+  //       .join("");
+  //   });
 });
 
 const nav = document.querySelector(".nav");

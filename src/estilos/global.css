@@ -114,7 +114,7 @@ p {
 }
 
 .section {
-  margin: 10vh 0;
+  /* margin: 10vh 0; */
   padding: 0.5vh 0.5vw;
   text-align: center;
   gap: 3rem;
@@ -348,6 +348,7 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-block: 10vh;
 }
 .peleas__container {
   display: grid;

@@ -21,6 +21,9 @@
     <!-- Link script -->
     <script src="src/javascript/script.js" defer></script>
     <title>BOXING MATCH | HOME</title>
+    <?php
+      include "./database/funciones.php";
+    ?>
   </head>
   <body>
     <header class="header">
@@ -114,6 +117,20 @@
         class="section"
         aria-label="Ranking de los mejore boxeadores"
       >
+      <?php
+          $conexion = conectar();
+          
+          $sql = "SELECT * FROM `boxeadores` ORDER BY ranking_p4p";
+          
+          $resultado = consultar($conexion, $sql);
+          
+          $boxeadores = array();
+          while ( $registro = mysqli_fetch_assoc($resultado) ) {
+              array_push($boxeadores, $registro); 
+          }
+          
+          cerrar($conexion);
+      ?>
         <h2>Ranking P4P.</h2>
         <table id="ranking-p4p" class="table">
           <caption>
@@ -124,11 +141,25 @@
               <th>#</th>
               <th>Nombre</th>
               <th>Pais</th>
+              <th>Categoria</th>
               <th>Record</th>
             </tr>
           </thead>
           <tbody id="ranking-container">
             <!-- ranking displayed js -->
+             <?php
+            foreach ( $boxeadores as $boxeador ) {
+        ?>
+        <tr class="">
+            <td data-cell="rank"><?php echo $boxeador["ranking_p4p"]; ?></td>
+            <td data-cell="name"><?php echo $boxeador["nombre"]," ", $boxeador["apellido"]; ?></td>
+            <td data-cell="country"><?php echo $boxeador["pais"]; ?></td>
+            <td data-cell="categoria"><?php echo $boxeador["peso"]; ?> kg</td>
+            <td data-cell="record"><?php echo $boxeador["victorias"],"-",$boxeador["derrotas"],"-",$boxeador["empates"]; ?></td>
+        </tr>
+        <?php
+    }
+    ?>
           </tbody>
         </table>
       </section>
@@ -163,7 +194,7 @@
                 class="footer__icons icons"
               />
             </a>
-            <a href="index.html" class="footer__socials--link">
+            <a href="./database/index.php" class="footer__socials--link">
               <img
                 src="public/icons/guante-de-boxeo.png"
                 alt="Social media icon"
