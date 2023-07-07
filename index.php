@@ -119,16 +119,12 @@
       >
       <?php
           $conexion = conectar();
-          
           $sql = "SELECT * FROM `boxeadores` ORDER BY ranking_p4p";
-          
           $resultado = consultar($conexion, $sql);
-          
           $boxeadores = array();
           while ( $registro = mysqli_fetch_assoc($resultado) ) {
               array_push($boxeadores, $registro); 
           }
-          
           cerrar($conexion);
       ?>
         <h2>Ranking P4P.</h2>

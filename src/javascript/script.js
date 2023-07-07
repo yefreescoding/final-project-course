@@ -34,11 +34,10 @@ window.addEventListener("DOMContentLoaded", function () {
   fetch("src/javascript/Data/boxers.json")
     .then((response) => response.json())
     .then((boxers) => {
-      const firstThreeBoxers = boxers.slice(0, 4);
-      boxeadoresCont.innerHTML = firstThreeBoxers
-        .map(
-          (boxer) =>
-            `<article class="card">
+      const BOXERS = boxers.slice(0, 8);
+      boxeadoresCont.innerHTML = BOXERS.map(
+        (boxer) =>
+          `<article class="card">
             <img
               src=${boxer.image}
               alt=""
@@ -51,26 +50,8 @@ window.addEventListener("DOMContentLoaded", function () {
               </p>
             </div>
           </article>`
-        )
-        .join("");
+      ).join("");
     });
-
-  // fetch("src/javascript/Data/boxers.json")
-  //   .then((response) => response.json())
-  //   .then((boxers) => {
-  //     const ranked = boxers.sort((a, b) => a.ranking - b.ranking);
-  //     rankingCont.innerHTML = ranked
-  //       .map(
-  //         (boxer) =>
-  //           `<tr>
-  //             <td data-cell="rank">${boxer.ranking}</td>
-  //             <td data-cell="name">${boxer.name}</td>
-  //             <td data-cell="country">${boxer.country}</td>
-  //             <td data-cell="record">${boxer.record}</td>
-  //           </tr>`
-  //       )
-  //       .join("");
-  //   });
 });
 
 const nav = document.querySelector(".nav");
