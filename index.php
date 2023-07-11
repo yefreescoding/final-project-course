@@ -101,7 +101,39 @@
         </div>
         <h2>PELEAS EN JULIO</h2>
         <div id="next-month" class="peleas__container">
-          <!-- Peleas -->
+          <?php
+            $conexion = conectar();
+            $sql = "SELECT b1.name AS fighter1, b2.name AS fighter2
+                    FROM fights
+                    INNER JOIN boxers b1 ON fights.boxer1_id = b1.id
+                    INNER JOIN boxers b2 ON fights.boxer2_id = b2.id";
+            $resultado = consultar($conexion, $sql);
+            $peleas = array();
+            while ( $registro = mysqli_fetch_assoc($resultado) ) {
+                array_push($peleas, $registro); 
+            }
+            cerrar($conexion);
+            ?>
+                <?php
+              foreach ( $peleas as $pelea ) {
+            ?>
+              <article class="peleas__article">
+                <img
+                  src=${pelea.image}
+                  alt=""
+                />
+                <h3>
+                  <span class="highlight"> <?php echo $pelea["fighter1"], ' Vs ', $pelea["fighter2"]; ?></span><br />
+                  000 lbs
+                </h3>
+                <span class="article__date">00.00.0000</span>
+                <p>
+                    ABCDEF, USA. DEFGHJ.
+                </p>
+              </article>
+            <?php
+            }
+          ?>
         </div>
       </section>
       <section id="fighters" class="section" aria-label="Peleadores destacados">
@@ -117,18 +149,9 @@
       <section
         id="ranking"
         class="section"
-        aria-label="Ranking de los mejore boxeadores"
+        aria-label="Ranking de los mejores boxeadores"
       >
-      <?php
-          $conexion = conectar();
-          $sql = "SELECT * FROM `boxers` ORDER BY p4p_ranking";
-          $resultado = consultar($conexion, $sql);
-          $boxeadores = array();
-          while ( $registro = mysqli_fetch_assoc($resultado) ) {
-              array_push($boxeadores, $registro); 
-          }
-          cerrar($conexion);
-      ?>
+ 
         <h2>Ranking P4P.</h2>
         <table id="ranking-p4p" class="table">
           <caption>
