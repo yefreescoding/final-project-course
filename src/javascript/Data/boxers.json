@@ -20,7 +20,7 @@
     "name": "Oleksandr Usyk",
     "record": "20-0-0",
     "country": "Ucrania",
-    "bio": "Campeón mundial en dos categorías de peso, habiendo ostentado los títulos unificados de peso pesado de la AMB (Super), la FIB, la OMB y la IBO; y el título indiscutible de peso crucero de 2018 a 2019, siendo el primer campeón de peso crucero en poseer los cuatro títulos mundiales principales. Es ampliamente considerado como uno de los mejores boxeadores ucranianos de todos los tiempos.",
+    "bio": "Campeón mundial en dos categorías de peso, habiendo ostentado los títulos unificados de peso pesado de la AMB (Super), la FIB, la OMB y la IBO; siendo el primer campeón de peso crucero en poseer los cuatro títulos mundiales principales. Es ampliamente considerado como uno de los mejores boxeadores ucranianos de todos los tiempos.",
     "image": "./public/images/boxers-images/usyk.webp"
   },
   {
@@ -37,7 +37,7 @@
     "record": "24-0-0",
     "country": "Japon",
     "bio": "Como amateur, compitió en los Juegos Olímpicos de Río de Janeiro 2016 representando a Honduras. Posteriormente se convirtió en el primer campeón mundial de boxeo amateur representante de Honduras. Elegido como el boxeador del año (2020). Excampeón unificado mundial de peso ligero",
-    "image": "./public/images/boxers-images/teofimo-lopez.webp"
+    "image": "./public/images/boxers-images/naoya_inoue.webp"
   },
   {
     "ranking": 4,
@@ -45,7 +45,7 @@
     "record": "19-1-0",
     "country": "Estados Unidos",
     "bio": "Como amateur, compitió en los Juegos Olímpicos de Río de Janeiro 2016 representando a Honduras. Posteriormente se convirtió en el primer campeón mundial de boxeo amateur representante de Honduras. Elegido como el boxeador del año (2020). Excampeón unificado mundial de peso ligero",
-    "image": "./public/images/boxers-images/teofimo-lopez.webp"
+    "image": "./public/images/boxers-images/errol_spencer.webp"
   },
   {
     "ranking": 10,
@@ -53,7 +53,7 @@
     "record": "19-0-0",
     "country": "Escocia",
     "bio": "Como amateur, compitió en los Juegos Olímpicos de Río de Janeiro 2016 representando a Honduras. Posteriormente se convirtió en el primer campeón mundial de boxeo amateur representante de Honduras. Elegido como el boxeador del año (2020). Excampeón unificado mundial de peso ligero",
-    "image": "./public/images/boxers-images/teofimo-lopez.webp"
+    "image": "./public/images/boxers-images/josh-taylor.webp"
   },
   {
     "ranking": 5,
@@ -61,7 +61,7 @@
     "record": "58-2-2",
     "country": "Mexico",
     "bio": "Como amateur, compitió en los Juegos Olímpicos de Río de Janeiro 2016 representando a Honduras. Posteriormente se convirtió en el primer campeón mundial de boxeo amateur representante de Honduras. Elegido como el boxeador del año (2020). Excampeón unificado mundial de peso ligero",
-    "image": "./public/images/boxers-images/teofimo-lopez.webp"
+    "image": "./public/images/boxers-images/saul_canelo.webp"
   },
   {
     "ranking": 6,
@@ -69,6 +69,14 @@
     "record": "21-0-0",
     "country": "Estados Unidos",
     "bio": "Como amateur, compitió en los Juegos Olímpicos de Río de Janeiro 2016 representando a Honduras. Posteriormente se convirtió en el primer campeón mundial de boxeo amateur representante de Honduras. Elegido como el boxeador del año (2020). Excampeón unificado mundial de peso ligero",
-    "image": "./public/images/boxers-images/teofimo-lopez.webp"
+    "image": "./public/images/boxers-images/dimitry_bivol.webp"
+  },
+  {
+    "ranking": 0,
+    "name": "Tyson Fury",
+    "record": "33-0-1",
+    "country": "United Kigndom",
+    "bio": "En noviembre de 2015, derrotó a Wladimir Klitschko para convertirse en el campeón unificado de peso pesado de WBA (Super), IBF, WBO, IBO y The Ring magazine. En febrero de 2020 derrotó a Deontay Wilder, convirtiéndose en el campeón del Consejo Mundial de Boxeo.",
+    "image": "./public/images/boxers-images/tyson_fury.webp"
   }
 ]

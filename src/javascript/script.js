@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function () {
   fetch("src/javascript/Data/boxers.json")
     .then((response) => response.json())
     .then((boxers) => {
-      const BOXERS = boxers.slice(0, 8);
+      const BOXERS = boxers.slice(0, 9);
       boxeadoresCont.innerHTML = BOXERS.map(
         (boxer) =>
           `<article class="card">

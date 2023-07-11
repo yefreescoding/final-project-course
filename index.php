@@ -77,7 +77,7 @@
             no te pierdas nada.
           </p>
           <div class="main__actions">
-            <a class="btn principal" href="/">Ver combate</a>
+            <a class="btn principal" href="https://www.espn.com/espnplus/player/_/id/4b3e3840-b3ba-4cea-a101-3e0ddf410280#bucketId=1" target="_blank">Ver combate</a>
             <a class="btn secondary" href="/">info boxeadores</a>
           </div>
         </div>
@@ -94,11 +94,13 @@
       >
         <h2>PRÓXIMAS GRANDES PELEAS</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, qui
-          aliquam repudiandae consectetur temporibus dicta tenetur eius
-          aspernatur.
+          Las peleas mas destacadas de los proximos meses. ¡Las que no te puedes perder!
         </p>
         <div id="fights-container" class="peleas__container">
+          <!-- Peleas -->
+        </div>
+        <h2>PELEAS EN JULIO</h2>
+        <div id="next-month" class="peleas__container">
           <!-- Peleas -->
         </div>
       </section>
@@ -119,7 +121,7 @@
       >
       <?php
           $conexion = conectar();
-          $sql = "SELECT * FROM `boxeadores` ORDER BY ranking_p4p";
+          $sql = "SELECT * FROM `boxers` ORDER BY p4p_ranking";
           $resultado = consultar($conexion, $sql);
           $boxeadores = array();
           while ( $registro = mysqli_fetch_assoc($resultado) ) {
@@ -147,11 +149,11 @@
             foreach ( $boxeadores as $boxeador ) {
         ?>
         <tr class="">
-            <td data-cell="rank"><?php echo $boxeador["ranking_p4p"]; ?></td>
-            <td data-cell="name"><?php echo $boxeador["nombre"]," ", $boxeador["apellido"]; ?></td>
-            <td data-cell="country"><?php echo $boxeador["pais"]; ?></td>
-            <td data-cell="categoria"><?php echo $boxeador["peso"]; ?> kg</td>
-            <td data-cell="record"><?php echo $boxeador["victorias"],"-",$boxeador["derrotas"],"-",$boxeador["empates"]; ?></td>
+            <td data-cell="rank"><?php echo $boxeador["p4p_ranking"]; ?></td>
+            <td data-cell="name"><?php echo $boxeador["name"] ?></td>
+            <td data-cell="country"><?php echo $boxeador["country"]; ?></td>
+            <td data-cell="categoria"><?php echo $boxeador["weight"]; ?> lbs</td>
+            <td data-cell="record"><?php echo $boxeador["record"] ?></td>
         </tr>
         <?php
     }

@@ -110,11 +110,9 @@ h3 {
 
 p {
   font-size: var(--fs-1);
-  /* color: var(--text); */
 }
 
 .section {
-  /* margin: 10vh 0; */
   padding: 0.5vh 0.5vw;
   text-align: center;
   gap: 3rem;
@@ -268,14 +266,12 @@ p {
 .header__h1 {
   color: var(--accent);
   text-align: center;
-  /* font-size: 18rem; */
   line-height: 1.24;
   white-space: nowrap;
   font-size: var(--fs-5);
 }
 
 .main {
-  /* align-items: center; */
   width: min(100%, 105em);
   margin: 0 auto;
 }
@@ -351,12 +347,16 @@ p {
   margin-block: 10vh;
 }
 .peleas__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .peleas__article {
+  flex-basis: 20em;
+  flex-grow: 1;
   background-color: var(--background-1);
   color: var(--text);
   border: 3px solid var(--accent);
@@ -379,7 +379,10 @@ p {
 }
 
 .card {
-  --trans-time: 0.5s;
+  --trans-time: 1.2s;
+  flex-basis: 18em;
+  flex-grow: 1;
+  aspect-ratio: 12/16;
   position: relative;
   background-color: #f2f2f2;
   display: flex;
@@ -392,7 +395,8 @@ p {
 }
 
 .card img {
-  aspect-ratio: 4/4;
+  aspect-ratio: 12/16;
+  width: 100%;
   object-fit: cover;
   transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background-color: var(--background);
