@@ -14,19 +14,21 @@ window.addEventListener("DOMContentLoaded", function () {
         .map(
           (pelea) =>
             ` <article class="peleas__article">
-            <img
-              src=${pelea.image}
-              alt=""
-            />
-            <h3>
-              <span class="highlight">${pelea.boxer1} Vs ${pelea.boxer2}</span> <br />
-              ${pelea.description}
-            </h3>
-            <span class="article__date">${pelea.date}</span>
-            <p>
-                ${pelea.place}
-            </p>
-          </article>`
+                  <img
+                    src=${pelea.image}
+                    alt="imagen del evento de combate profesional de boxeo entre ${pelea.boxer1} Vs ${pelea.boxer2}"
+                  />
+                <div class="">
+                  <h3>
+                    <span class="highlight">${pelea.boxer1} Vs ${pelea.boxer2}</span> <br />
+                    ${pelea.description}
+                  </h3>
+                  <span class="article__date">${pelea.date}</span>
+                  <p>
+                      ${pelea.place}
+                  </p>
+                </div>
+              </article>`
         )
         .join("");
     });
@@ -45,14 +47,14 @@ window.addEventListener("DOMContentLoaded", function () {
             <div class="card__content">
               <h3 class="card__title">${boxer.name}</h3>
               <span class="record">${boxer.record}</span>
-              <p class="card__description">
-                ${boxer.bio}
-              </p>
+             
             </div>
           </article>`
       ).join("");
     });
 });
+
+//  <p class="card__description">${boxer.bio}</p>;
 
 const nav = document.querySelector(".nav");
 

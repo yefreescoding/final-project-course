@@ -400,8 +400,8 @@ CV. Disponibilidad 6 u 8 horas. */
 
 .card {
   --trans-time: 1.2s;
-  flex-basis: 18em;
-  flex-grow: 1;
+  /* flex-basis: 18em;
+  flex-grow: 1; */
   aspect-ratio: 12/16;
   position: relative;
   background-color: #f2f2f2;
@@ -409,8 +409,8 @@ CV. Disponibilidad 6 u 8 horas. */
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  perspective: 1000px;
-  transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* perspective: 1000px; */
+  /* transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275); */
   border: 3px solid var(--accent);
   border-radius: 0.5rem;
 }
@@ -419,35 +419,34 @@ CV. Disponibilidad 6 u 8 horas. */
   aspect-ratio: 12/16;
   width: 100%;
   object-fit: cover;
-  transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275); */
   background-color: var(--background);
 }
 
 .card__content {
   position: absolute;
-  inset: 0;
+  inset: auto 0 0 0;
   padding: 1.1rem;
-  color: var(--text-2);
-  background-color: var(--background-2);
+  color: var(--text);
+  background: linear-gradient(hsla(0, 0%, 4%, 0.6), var(--background) 100%);
   text-align: left;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 5;
+  height: fit-content;
+  /* transition: all var(--trans-time) cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
 
-.card:hover .card__content {
+/* .card:hover .card__content {
   transform: rotateX(0deg);
-}
+} */
 
 .card__title {
   font-size: var(--fs-2);
-  color: var(--text-2);
   font-weight: 700;
 }
 
-.card:hover img {
+/* .card:hover img {
   scale: 0;
-}
+} */
 
 .card__description {
   margin: 10px 0 0;
