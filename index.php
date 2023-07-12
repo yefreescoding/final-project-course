@@ -47,15 +47,15 @@
       <div class="header__sponsor">
         <div class="header__ads">
           <h2>Yokohoma Arena</h2>
-          <p>Yokohama, Japon.</p>
+          <p>Tokyo, Japon.</p>
         </div>
         <div class="header__ads">
-          <h2>CMB y OMB</h2>
+          <h2>WBC y WBO</h2>
           <p>supergallo</p>
         </div>
         <div class="header__ads">
-          <h2>SAB. MAYO 7</h2>
-          <p>En vivo por PPV</p>
+          <h2>MAR. JUL 25</h2>
+          <p>En vivo por ESPN</p>
         </div>
       </div>
       <div id="inicio" class="header__logo" aria-label="Logo de la pagina">
@@ -87,26 +87,31 @@
         <span class="carousel__span"> VS </span>
         <span class="carousel__span"> Stephen Fulton </span>
       </div>
-      <section
+      <div
         id="fights"
         class="section peleas"
         aria-label="Proximos combates"
       >
-        <h2>PRÓXIMAS GRANDES PELEAS</h2>
-        <p>
-          Las peleas mas destacadas de los proximos meses. ¡Las que no te puedes perder!
-        </p>
-        <div id="fights-container" class="peleas__container">
-          <!-- Peleas -->
+        <div aria-label="cabecera del contenido principal">
+          <h2>PRÓXIMAS GRANDES PELEAS</h2>
+          <p>
+            Las peleas mas destacadas de los proximos meses. ¡Las que no te puedes perder!
+          </p>
         </div>
-        <h2>PELEAS EN JULIO</h2>
-        <div id="next-month" class="peleas__container">
+        <section id="fights-container" class="peleas__container">
+          <!-- Peleas -->
+        </section>
+        <section>
+          <h2>PELEAS EN JULIO</h2>
+          <div id="next-month" class="peleas__container">
           <?php
             $conexion = conectar();
-            $sql = "SELECT b1.name AS fighter1, b2.name AS fighter2
+            $sql = "SELECT b1.name AS fighter1, b2.name AS fighter2, date, place
                     FROM fights
                     INNER JOIN boxers b1 ON fights.boxer1_id = b1.id
-                    INNER JOIN boxers b2 ON fights.boxer2_id = b2.id";
+                    INNER JOIN boxers b2 ON fights.boxer2_id = b2.id
+                    WHERE fights.date BETWEEN '2023-07-01' AND '2023-07-31'
+                    ORDER BY date";
             $resultado = consultar($conexion, $sql);
             $peleas = array();
             while ( $registro = mysqli_fetch_assoc($resultado) ) {
@@ -118,24 +123,89 @@
               foreach ( $peleas as $pelea ) {
             ?>
               <article class="peleas__article">
-                <img
-                  src=${pelea.image}
-                  alt=""
-                />
                 <h3>
                   <span class="highlight"> <?php echo $pelea["fighter1"], ' Vs ', $pelea["fighter2"]; ?></span><br />
-                  000 lbs
                 </h3>
-                <span class="article__date">00.00.0000</span>
                 <p>
-                    ABCDEF, USA. DEFGHJ.
+                  <span class="article__date" style="display: block;"><?php echo $pelea["date"]; ?></span>
+                    <?php echo $pelea["place"]; ?>
                 </p>
               </article>
             <?php
             }
           ?>
-        </div>
-      </section>
+        </section>
+        <section>
+          <h2>PELEAS EN AGOSTO</h2>
+          <div id="next-month" class="peleas__container">
+            <?php
+              $conexion = conectar();
+              $sql = "SELECT b1.name AS fighter1, b2.name AS fighter2, date, place
+                      FROM fights
+                      INNER JOIN boxers b1 ON fights.boxer1_id = b1.id
+                      INNER JOIN boxers b2 ON fights.boxer2_id = b2.id
+                      WHERE fights.date BETWEEN '2023-08-01' AND '2023-08-31'
+                      ORDER BY date";
+              $resultado = consultar($conexion, $sql);
+              $peleas = array();
+              while ( $registro = mysqli_fetch_assoc($resultado) ) {
+                  array_push($peleas, $registro); 
+              }
+              cerrar($conexion);
+              ?>
+                  <?php
+                foreach ( $peleas as $pelea ) {
+              ?>
+                <article class="peleas__article">
+                  <h3>
+                    <span class="highlight"> <?php echo $pelea["fighter1"], ' Vs ', $pelea["fighter2"]; ?></span><br />
+                  </h3>
+                  <p>
+                    <span class="article__date" style="display: block;"><?php echo $pelea["date"]; ?></span>
+                      <?php echo $pelea["place"]; ?>
+                  </p>
+                </article>
+              <?php
+              }
+            ?>
+          </div>
+        </section>
+        <section>
+          <h2>PELEAS EN SEPTIEMBRE</h2>
+          <div id="next-month" class="peleas__container">
+            <?php
+              $conexion = conectar();
+              $sql = "SELECT b1.name AS fighter1, b2.name AS fighter2, date, place
+                      FROM fights
+                      INNER JOIN boxers b1 ON fights.boxer1_id = b1.id
+                      INNER JOIN boxers b2 ON fights.boxer2_id = b2.id
+                      WHERE fights.date BETWEEN '2023-09-01' AND '2023-09-30'
+                      ORDER BY date";
+              $resultado = consultar($conexion, $sql);
+              $peleas = array();
+              while ( $registro = mysqli_fetch_assoc($resultado) ) {
+                  array_push($peleas, $registro); 
+              }
+              cerrar($conexion);
+              ?>
+                  <?php
+                foreach ( $peleas as $pelea ) {
+              ?>
+                <article class="peleas__article">
+                  <h3>
+                    <span class="highlight"> <?php echo $pelea["fighter1"], ' Vs ', $pelea["fighter2"]; ?></span><br />
+                  </h3>
+                  <p>
+                    <span class="article__date" style="display: block;"><?php echo $pelea["date"]; ?></span>
+                      <?php echo $pelea["place"]; ?>
+                  </p>
+                </article>
+              <?php
+              }
+            ?>
+          </div>
+        </section>
+      </div>
       <section id="fighters" class="section" aria-label="Peleadores destacados">
         <h2>BOXEADORES DESTACADOS</h2>
         <p>
@@ -150,8 +220,16 @@
         id="ranking"
         class="section"
         aria-label="Ranking de los mejores boxeadores"
-      >
- 
+      ><?php
+            $conexion = conectar();
+            $sql = "SELECT * FROM boxers ORDER BY p4p_ranking LIMIT 10";
+            $resultado = consultar($conexion, $sql);
+            $boxeadores = array();
+            while ( $registro = mysqli_fetch_assoc($resultado) ) {
+                array_push($boxeadores, $registro); 
+            }
+            cerrar($conexion);
+            ?>
         <h2>Ranking P4P.</h2>
         <table id="ranking-p4p" class="table">
           <caption>

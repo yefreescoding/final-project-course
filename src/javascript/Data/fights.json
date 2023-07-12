@@ -3,32 +3,24 @@
     "boxer1": "Naoya Inoue",
     "boxer2": "Stephen Fulton",
     "description": "Pelea de pesoligreo",
-    "date": "Martes 24 Jul, 2023.",
-    "place": "Osaka, Japon.",
-    "image": "public/images/article-images/poster-hero.webp"
+    "date": "Martes 25 Jul, 2023.",
+    "place": "Tokyo, Japon.",
+    "image": "public/images/article-images/naoya-vs-fulton.jpg"
   },
   {
-    "boxer1": "Andre Ward",
-    "boxer2": "Mikael Tyson",
-    "date": "Martes 7 Jul, 2023.",
-    "description": "Pelea de peso completo",
-    "place": "Los Angeles California, EEUU.",
-    "image": "public/images/article-images/article-fight-img.webp"
+    "boxer1": "Errol Spence Jr",
+    "boxer2": "Terence Crawford",
+    "date": "Sábado 29 Jul, 2023.",
+    "description": "Pelea de peso welter",
+    "place": "Las Vegas, Nevada. EEUU.",
+    "image": "public/images/article-images/errol-vs-crawford.webp"
   },
   {
-    "boxer1": "Jackie Chan",
-    "boxer2": "Mera Cruz",
-    "date": "Martes 7 Jul, 2023.",
-    "description": "Pelea de pesoligreo",
-    "place": "Los Angeles California, EEUU.",
-    "image": "public/images/article-images/fight-2.webp"
-  },
-  {
-    "boxer1": "Test cholo",
-    "boxer2": "john doe",
-    "date": "Martes 7 Jul, 2023.",
-    "description": "Pelea de pesoligreo",
-    "place": "Los Angeles California, EEUU.",
-    "image": "public/images/article-images/fight-2.webp"
+    "boxer1": "Jake Paul",
+    "boxer2": "Nate Diaz",
+    "date": "Sábado 5 Ago, 2023.",
+    "description": "Pelea pactada en 185 lbs",
+    "place": "Dallas, Texas. EEUU.",
+    "image": "public/images/article-images/jake-vs-diaz.webp"
   }
 ]
