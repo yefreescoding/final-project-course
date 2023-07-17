@@ -37,7 +37,6 @@
         <a href="#fights" class="nav__link">peleas</a>
         <a href="#fighters" class="nav__link">boxeadores</a>
         <a href="#ranking" class="nav__link">ranking</a>
-        <a href="index.html" class="nav__link">sobre nosotros</a>
         <img
           class="icons"
           src="public/icons/rating.avif"
@@ -206,8 +205,19 @@
           </div>
         </section>
       </div>
+      <section class="peleas-video">
+        <div>
+          <iframe width="560" height="360" src="https://www.youtube.com/embed/uCr9wfxsOBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <article>
+          <h2>Las mejores peleas del 2022</h2>
+          <p>
+            Disfruta de una recapitulación de las mejores peleas del año pasado. ¡No hay duda de que dejaron la vara bastante alta!, y no decepcionaron a ningún fanático del boxeo.
+          </p>
+        </article>
+      </section>
       <section id="fighters" class="section" aria-label="Peleadores destacados">
-        <h2>BOXEADORES DESTACADOS</h2>
+        <h2>BOXEADORES DESTACADOS DEL MES</h2>
         <p>
           ¿Quienes son los boxeadores mas destacados del momento? Aqui los
           encontraras a todos. Hechale un vistazo!
@@ -266,27 +276,26 @@
     <footer class="footer">
       <header class="footer__top">
         <div class="footer__info">
-          <div class="footer__logo">LOGO BOXINGMATCH</div>
+          <div class="footer__logo">BOXINGMATCH</div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita,
-            quos? Ex quidem iusto veniam quasi reiciendis deserunt architecto.
+            Toda la información que es presentada en la pagina es de su correcta utilización, y distribución.
           </p>
           <div class="footer__socials">
-            <a href="index.html" class="footer__socials--link">
+            <a href="https://www.twitter.com" class="footer__socials--link">
               <img
                 src="public/icons/signo-de-twitter.png"
                 alt="Social media icon"
                 class="footer__icons icons"
               />
             </a>
-            <a href="index.html" class="footer__socials--link">
+            <a href="https://www.instagram.com" class="footer__socials--link">
               <img
                 src="public/icons/instagram.png"
                 alt="Social media icon"
                 class="footer__icons icons"
               />
             </a>
-            <a href="index.html" class="footer__socials--link">
+            <a href="https://www.facebook.com" class="footer__socials--link">
               <img
                 src="public/icons/facebook.png"
                 alt="Social media icon"
@@ -304,22 +313,22 @@
         </div>
         <div class="footer__action">
           <ul class="footer__ul">
-            <li><h3>titulo</h3></li>
-            <li><a href="index.html">link</a></li>
-            <li><a href="index.html">link</a></li>
-            <li><a href="index.html">link</a></li>
+            <li><h3>Redes</h3></li>
+            <li><a href="index.html">Facebook</a></li>
+            <li><a href="index.html">YouTube</a></li>
+            <li><a href="index.html">Twitter</a></li>
           </ul>
           <ul class="footer__ul">
-            <li><h3>titulo</h3></li>
-            <li><a href="index.html">link</a></li>
-            <li><a href="index.html">link</a></li>
-            <li><a href="index.html">link</a></li>
+            <li><h3>Legales</h3></li>
+            <li><a href="index.html">Copyright</a></li>
+            <li><a href="index.html">Manejo de los datos</a></li>
+            <li><a href="index.html">España</a></li>
           </ul>
           <ul class="footer__ul">
-            <li><h3>titulo</h3></li>
-            <li><a href="index.html">link</a></li>
-            <li><a href="index.html">link</a></li>
-            <li><a href="index.html">link</a></li>
+            <li><h3>Únete</h3></li>
+            <li><a href="index.html">Correo</a></li>
+            <li><a href="index.html">Posiciones</a></li>
+            <li><a href="index.html">Equipo de desarrollo</a></li>
           </ul>
         </div>
       </header>

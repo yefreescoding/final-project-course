@@ -1,12 +1,12 @@
 // import data from "../data/boxers.json";
 
 // Test de informacion de peleadores
-const peleasCont = document.querySelector("#fights-container");
-const boxeadoresCont = document.querySelector("#fighters-container");
-const rankingCont = document.querySelector("#ranking-container");
+const peleasCont = document.querySelector('#fights-container');
+const boxeadoresCont = document.querySelector('#fighters-container');
+const rankingCont = document.querySelector('#ranking-container');
 
-window.addEventListener("DOMContentLoaded", function () {
-  fetch("src/javascript/Data/fights.json")
+window.addEventListener('DOMContentLoaded', function () {
+  fetch('src/javascript/Data/fights.json')
     .then((response) => response.json())
     .then((fights) => {
       const firstThreeElements = fights.slice(0, 3);
@@ -30,13 +30,13 @@ window.addEventListener("DOMContentLoaded", function () {
                 </div>
               </article>`
         )
-        .join("");
+        .join('');
     });
 
-  fetch("src/javascript/Data/boxers.json")
+  fetch('src/javascript/Data/boxers.json')
     .then((response) => response.json())
     .then((boxers) => {
-      const BOXERS = boxers.slice(0, 9);
+      const BOXERS = boxers.slice(0, 6);
       boxeadoresCont.innerHTML = BOXERS.map(
         (boxer) =>
           `<article class="card">
@@ -50,36 +50,36 @@ window.addEventListener("DOMContentLoaded", function () {
              
             </div>
           </article>`
-      ).join("");
+      ).join('');
     });
 });
 
 //  <p class="card__description">${boxer.bio}</p>;
 
-const nav = document.querySelector(".nav");
+const nav = document.querySelector('.nav');
 
-window.addEventListener("scroll", function () {
+window.addEventListener('scroll', function () {
   const scrollHeight = window.pageYOffset;
   const navHeight = nav.getBoundingClientRect().height;
   if (scrollHeight > navHeight) {
-    nav.classList.add("fixed-nav");
+    nav.classList.add('fixed-nav');
   } else {
-    nav.classList.remove("fixed-nav");
+    nav.classList.remove('fixed-nav');
   }
 });
 
 // console.log(navHeight);
-const icons = document.querySelectorAll(".icons");
+// const icons = document.querySelectorAll(".icons");
 
-const darkModeQuery = window.matchMedia("(prefers-color-scheme: light)");
+// const darkModeQuery = window.matchMedia("(prefers-color-scheme: light)");
 
-function toggleDarkMode(event) {
-  if (event.matches) {
-    icons.forEach((icon) => icon.classList.add("icons-light"));
-  } else {
-    icons.forEach((icon) => icon.classList.remove("icons-light"));
-  }
-}
+// function toggleDarkMode(event) {
+//   if (event.matches) {
+//     icons.forEach((icon) => icon.classList.add("icons-light"));
+//   } else {
+//     icons.forEach((icon) => icon.classList.remove("icons-light"));
+//   }
+// }
 
-darkModeQuery.addEventListener("change", toggleDarkMode);
-toggleDarkMode(darkModeQuery);
+// darkModeQuery.addEventListener("change", toggleDarkMode);
+// toggleDarkMode(darkModeQuery);

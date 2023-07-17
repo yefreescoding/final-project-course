@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Boxing";
+  font-family: 'Boxing';
   font-weight: bold;
-  src: url("../../public/fonts/boxing-striped.woff2") format("woff2"),
-    url("../../public/fonts/boxing-striped\(1\).woff2") format("woff2"),
-    url("../../public/fonts/boxing.woff2") format("woff2");
+  src: url('../../public/fonts/boxing-striped.woff2') format('woff2'),
+    url('../../public/fonts/boxing-striped\(1\).woff2') format('woff2'),
+    url('../../public/fonts/boxing.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: "fighter";
+  font-family: 'fighter';
   font-weight: 400;
   src: url(../../public/fonts/brackley-demo.regular.ttf);
 }
@@ -21,8 +21,8 @@
   --fs-3: clamp(2rem, calc(1rem + 1.7vw), 4rem);
   --fs-4: clamp(2.5rem, calc(1rem + 3vw), 5rem);
   --fs-5: clamp(2rem, calc(1rem + 15vw), 18rem);
-  --ff-boxing: "fighter";
-  --ff-boxing: "Boxing";
+  --ff-boxing: 'fighter';
+  --ff-boxing: 'Boxing';
 
   --text: hsl(0, 0%, 100%);
   --text-2: hsl(0, 0%, 10%);
@@ -65,7 +65,7 @@ html {
 body {
   background-color: var(--background);
   color: var(--text);
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 img,
@@ -92,7 +92,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   text-wrap: balance;
 }
@@ -115,6 +115,7 @@ p {
 
 .section {
   padding: 0.5vh 0.5vw;
+  margin-block: 10vh;
   gap: 3rem;
 }
 
@@ -291,7 +292,7 @@ section h2 {
 }
 
 .main__cover::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -313,7 +314,7 @@ section h2 {
 }
 
 .main__text h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
   font-size: var(--fs-4);
 }
@@ -458,6 +459,34 @@ CV. Disponibilidad 6 u 8 horas. */
 /* ============================ */
 /* ============================ */
 
+.peleas-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--accent);
+  margin-block: 20vh;
+}
+
+.peleas-video h2 {
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.peleas-video > * {
+  flex-basis: 20em;
+  flex-grow: 1;
+}
+
+.peleas-video iframe {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9/16;
+}
+
+/* ============================ */
+/* ============================ */
+
 .table {
   text-align: left;
   background-color: hsl(0, 0%, 10%);
@@ -505,7 +534,7 @@ CV. Disponibilidad 6 u 8 horas. */
   }
 
   .table td::before {
-    content: attr(data-cell) ": ";
+    content: attr(data-cell) ': ';
     font-weight: 700;
     text-transform: uppercase;
     margin-right: 10px;
